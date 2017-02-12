@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/topicTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/submit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#efefef"
+        android:padding="3dp"
+        android:text="Topic Title"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/topicContent"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/topicTitle"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#efefef"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:padding="3dp"
+        android:text="Enter the topic content here..." />
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="(✓) submit"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#00aa00"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/topicContent"
+        android:layout_alignTop="@+id/submit"
+        android:text="(x) cancel"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ff0000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>

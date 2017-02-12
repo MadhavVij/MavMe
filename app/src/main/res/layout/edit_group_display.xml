@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/saveChanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="(✓) save changes"
+        android:textColor="#00aa00"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text="(x) cancel"
+        android:textColor="#ff0000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/groupNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cancel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:text="Group Name" />
+
+    <TextView
+        android:id="@+id/parentGroupLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/groupNameLabel"
+        android:layout_below="@+id/editGroupName"
+        android:layout_marginTop="30dp"
+        android:text="Parent Group" />
+
+    <EditText
+        android:id="@+id/editGroupName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/groupNameLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp"
+        android:background="#efefef"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="3dp"
+        android:text="New Group"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:id="@+id/parentGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parentGroupLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/deleteGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parentGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="#ff0000"
+        android:text="DELETE"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+</RelativeLayout>

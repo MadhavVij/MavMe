@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopicDisplay">
+
+
+    <TextView
+        android:id="@+id/topicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Topic Title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/topicContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/horizBar1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Topic Content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/topicPoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/groupPath"
+        android:layout_marginLeft="15dp"
+        android:text="User"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#0000ff"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/commentList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/horizBar2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:divider="#efefef"
+        android:dividerHeight="1dp"
+        android:scrollIndicators="right"
+        android:smoothScrollbar="false" />
+
+    <EditText
+        android:id="@+id/commentField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/butReply"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="#efefef"
+        android:ems="10"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:longClickable="false"
+        android:padding="3dp"
+        android:text="Enter comment here..."
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/commentField"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:background="#00000000"
+        android:text=">> submit"
+        android:textAllCaps="false"
+        android:textColor="#00aa00"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/butReply"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/topicPoster"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/reply_topic"
+        android:backgroundTint="#aaaaaa"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/loveCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/butReply"
+        android:layout_alignParentEnd="false"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/butReply"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#aaaaaa" />
+
+    <ImageButton
+        android:id="@+id/butLove"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/topicPoster"
+        android:layout_toEndOf="@+id/loveCount"
+        android:background="@drawable/love_topic"
+        android:backgroundTint="#aaaaaa" />
+
+    <ImageButton
+        android:id="@+id/butFlag"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/topicPoster"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/butLove"
+        android:background="@drawable/flag_post"
+        android:backgroundTint="#aaaaaa" />
+
+    <ImageButton
+        android:id="@+id/butDelete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/topicPoster"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/butFlag"
+        android:background="@drawable/delete_topic"
+        android:backgroundTint="#aaaaaa"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/topicDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/groupPath"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@+id/topicPoster"
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/groupPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/topicTitle"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="/grouppath"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffa500" />
+
+    <TextView
+        android:id="@+id/horizBar2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/topicContent"
+        android:layout_marginTop="10dp"
+        android:background="#bbbbbb" />
+
+    <TextView
+        android:id="@+id/horizBar1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignStart="@+id/horizBar2"
+        android:layout_below="@+id/submit"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#dddddd" />
+
+</RelativeLayout>

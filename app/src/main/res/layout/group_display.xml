@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <RelativeLayout
+        android:id="@+id/pinnedContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/newTopic"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/pinnedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pin"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/pin"
+            android:text="Pinned Topic Title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FF000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pinnedContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pinnedTitle"
+            android:layout_marginLeft="15dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="Pinned Topic Content"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/pinnedUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_below="@+id/pinnedContent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="User"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#0000ff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pinnedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/pinnedContent"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Date"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/horizBar1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#dddddd" />
+
+        <ImageView
+            android:id="@+id/pin"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/horizBar1"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/pin"
+            android:backgroundTint="#aaaaaa" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/topicList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/divider"
+        android:divider="#efefef"
+        android:dividerHeight="1dp" />
+
+    <TextView
+        android:id="@+id/groupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Group Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/groupPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/groupTitle"
+        android:layout_below="@+id/groupTitle"
+        android:text="/groupPath"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#ffa500" />
+
+    <TextView
+        android:id="@+id/horizBar2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/pinnedContainer"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#bbbbbb" />
+
+    <ImageButton
+        android:id="@+id/newTopic"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/groupPath"
+        android:layout_below="@+id/groupPath"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/new_topic"
+        android:backgroundTint="#aaaaaa" />
+
+    <TextView
+        android:id="@+id/pgLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizBar2"
+        android:layout_toLeftOf="@+id/divider"
+        android:text="◀ prev"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pgLeft"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:text="|"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/pgRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/divider"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/divider"
+        android:text="next ▶"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
+
+</RelativeLayout>

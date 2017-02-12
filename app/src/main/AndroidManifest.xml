@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.madhav.mavme">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.example.madhav.mavme.LoginDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.LoginDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.madhav.mavme.RegistrationDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.RegistrationDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.madhav.mavme.HomeDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.HomeDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.example.madhav.mavme.TopicDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.TopicDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.madhav.mavme.GroupDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.GroupDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.madhav.mavme.EditGroupDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.EditGroupDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.example.madhav.mavme.GroupListDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.GroupListDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.madhav.mavme.NewTopicDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.NewTopicDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.madhav.mavme.UserDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.UserDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.madhav.mavme.SearchDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.SearchDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.madhav.mavme.ProfileDisplay">
+            <intent-filter>
+                <action android:name="com.example.madhav.mavme.ProfileDisplay" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

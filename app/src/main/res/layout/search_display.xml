@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="#0000ff"
+        android:text="search"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/searchQuery"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/search"
+        android:layout_toStartOf="@+id/search"
+        android:autoText="true"
+        android:background="#dddddd"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:text="Enter member&apos;s name here..." />
+
+    <ListView
+        android:id="@+id/searchResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/searchQuery"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/noSearchResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchResults"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="NO USERS FOUND"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+</RelativeLayout>
